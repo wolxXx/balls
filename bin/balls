@@ -1,5 +1,5 @@
 #!/bin/bash
-BALLS_LIB=$(dirname $0)/../lib
+BALLS_LIB=$(dirname $0)/lib
 BALLS_LIB=$(readlink -f "$BALLS_LIB") # expand the ../
 
 mode=$1; shift
