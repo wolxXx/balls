@@ -4,9 +4,31 @@ This is a fully-featured web platform for everyone's favorite scripting language
 
 Written using ADD (API driven development)
 
-Environment variables
----------------------
+Running the server
+------------------
+Run the server with:
 
+    . bin/balls server
+
+Adding views
+------------
+Use one of the following methods, the arguments being path and function to execute:
+
+    b:GET "/ HomeView"
+    b:POST "/sendPhoto SendPhotoView"
+    b:PUT "/uploadPhoto UploadPhotoView"
+    b:DELETE "/deletePhoto DeletePhotoView"
+
+For example:
+
+    function TestFunc() {
+        echo 'This is a test!';
+    }
+    
+    b:GET "/ TestFunc"
+
+Environment (config) variables
+------------------------------
 `BALLS_ENV` Balls environment (development or production)
 
 `BALLS_CONF` Configuration file (default is `config/$BALLS_ENV.sh`)
